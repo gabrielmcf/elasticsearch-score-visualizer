@@ -1,0 +1,23 @@
+{
+  "name": "elasticsearch-core-visualizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tree.js",
+  "scripts": {
+    "start": "http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielmcf/ElasticsearchScoreVisualizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielmcf/ElasticsearchScoreVisualizer/issues"
+  },
+  "homepage": "https://github.com/gabrielmcf/ElasticsearchScoreVisualizer#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

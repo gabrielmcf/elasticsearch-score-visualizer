@@ -1,50 +1,13 @@
-var fileName = 'teste.json';
-
-var margin = { top: 30, right: 20, bottom: 30, left: 20 },
-  width = window.innerWidth,
-  barHeight = 20,
-  barWidth = (width * 0.5 - margin.left - margin.right) * 0.95;
-
-var i = 0,
-  duration = 400,
-  root;
-
-var diagonal = d3
-  .linkHorizontal()
-  .x(function(d) {
-    return d.y;
-  })
-  .y(function(d) {
-    return d.x;
-  });
-
-var offerName = '';
-
-var svg = d3
-  .select('body')
-  .append('svg')
-  .attr('width', width) // + margin.left + margin.right)
-  .append('g')
-  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-d3.json(fileName, function(error, data) {
-  if (error) throw error;
-  d3.select('#title').html(
-    `<b>Oferta:</b> ${data._source.name} (${data._source.id})`
-  );
-  var explainStr = JSON.stringify(data._explanation);
-  explainStr = explainStr.replace(/"details":/g, '"children":');
-  root = d3.hierarchy(JSON.parse(explainStr));
-  root.x0 = 0;
-  root.y0 = 0;
-  update(root);
-});
+function updateTitle(data) {
+  let container = document.querySelector('.title')
+  container.innerHTML = (`<b>Oferta</b>: ${data._source.name} (${data._source.id})`)
+}
 
 function update(source) {
   // Compute the flattened node list.
-  var nodes = root.descendants();
+  let nodes = root.descendants();
 
-  var height = Math.max(
+  let height = Math.max(
     500,
     nodes.length * barHeight + margin.top + margin.bottom
   );
@@ -60,18 +23,18 @@ function update(source) {
     .style('height', height + 'px');
 
   // Compute the "layout". TODO https://github.com/d3/d3-hierarchy/issues/67
-  var index = -1;
+  let index = -1;
   root.eachBefore(function(n) {
     n.x = ++index * barHeight;
     n.y = n.depth * 20;
   });
 
   // Update the nodes…
-  var node = svg.selectAll('.node').data(nodes, function(d) {
+  let node = svg.selectAll('.node').data(nodes, function(d) {
     return d.id || (d.id = ++i);
   });
 
-  var nodeEnter = node
+  let nodeEnter = node
     .enter()
     .append('g')
     .attr('class', 'node')
@@ -128,7 +91,7 @@ function update(source) {
     .remove();
 
   // Update the links…
-  var link = svg.selectAll('.link').data(root.links(), function(d) {
+  let link = svg.selectAll('.link').data(root.links(), function(d) {
     return d.target.id;
   });
 
@@ -138,7 +101,7 @@ function update(source) {
     .insert('path', 'g')
     .attr('class', 'link')
     .attr('d', function(d) {
-      var o = { x: source.x0, y: source.y0 };
+      let o = { x: source.x0, y: source.y0 };
       return diagonal({ source: o, target: o });
     })
     .transition()
@@ -157,7 +120,7 @@ function update(source) {
     .transition()
     .duration(duration)
     .attr('d', function(d) {
-      var o = { x: source.x, y: source.y };
+      let o = { x: source.x, y: source.y };
       return diagonal({ source: o, target: o });
     })
     .remove();
@@ -184,3 +147,60 @@ function click(d) {
 function color(d) {
   return d._children ? '#3182bd' : d.children ? '#c6dbef' : '#fd8d3c';
 }
+
+function updateData(data) {
+  updateTitle(data)
+  let explainStr = JSON.stringify(data._explanation);
+  explainStr = explainStr.replace(/"details":/g, '"children":');
+  root = d3.hierarchy(JSON.parse(explainStr));
+  root.x0 = 0;
+  root.y0 = 0;
+  update(root);
+}
+
+
+let fileName = 'example.json';
+
+let margin = { top: 30, right: 20, bottom: 30, left: 20 },
+  width = window.innerWidth - 366,
+  barHeight = 20,
+  barWidth = (width * 0.5 - margin.left - margin.right) * 0.95;
+
+let i = 0,
+  duration = 400,
+  root;
+
+let diagonal = d3
+  .linkHorizontal()
+  .x(function(d) {
+    return d.y;
+  })
+  .y(function(d) {
+    return d.x;
+  });
+
+let offerName = '';
+
+let svg = d3
+  .select('#graph')
+  .append('svg')
+  .attr('width', width) // + margin.left + margin.right)
+  .append('g')
+  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+d3.json(fileName, function(error, data) {
+  if (error) throw error;
+  updateData(data);
+});
+
+let textarea = document.querySelector('.query');
+let updateButton = document.querySelector('.update-btn')
+
+updateButton.addEventListener('click', () => {
+  try {
+    let data = JSON.parse(textarea.value);
+    updateData(data);
+  } catch (e) {
+    alert('Error parsing JSON');
+  }
+})

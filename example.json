@@ -1,0 +1,298 @@
+{
+  "_shard": 0,
+  "_node": "9trnoRhoRN2JdXAhIJqxqQ",
+  "_index": "shopfacil2",
+  "_type": "conjunto_de_roupa",
+  "_id": "2532116",
+  "_score": 5.345374,
+  "_source": {
+    "url": "https://www.shopfacil.com.br/conjunto-infantil-camiseta-chinelos-com-brilho-e-calca-legging-jeans-2472491/p",
+    "name": "Conjunto Infantil Camiseta Chinelos com Brilho e Calça Legging Jeans Conjunto Calça Infantil 1 ano",
+    "img": "http://shopfacil.vteximg.com.br/arquivos/ids/2107041/Conjunto-Calca-Infantil-1-ano_0.jpg?v=635847569525200000",
+    "available": true,
+    "sku": "2532116",
+    "id": "2532116",
+    "seller": "900000009",
+    "seller_list": ["Ecameleca"],
+    "business_factor": 0,
+    "product_id": "2472491",
+    "parent_id": "2472491",
+    "parent_offer": false,
+    "created_at": 1458039258165,
+    "updated_at": 1539414763955,
+    "last_sampling_date_tracker": 1536905172342,
+    "es_created_at": 1547127224265,
+    "es_updated_at": 1547127224265,
+    "category_name": "moda",
+    "brand": "Bittix",
+    "type_": "Moda Infantil",
+    "search_category": "Moda",
+    "raw_category": [
+      "/Moda/Moda Infantil/Conjuntos/",
+      "/Moda/Moda Infantil/",
+      "/Moda/"
+    ],
+    "inactive": false,
+    "normalized_categories": [
+      "/moda/moda-infantil/conjuntos/",
+      "/moda/moda-infantil/",
+      "/moda/"
+    ],
+    "clusters": ["491"],
+    "price": 127.3,
+    "list_price": 137.9,
+    "price_discount": 7.686729514140688,
+    "installments": 3,
+    "installment_value": 42.43,
+    "metadata": {
+      "color": ["Branco", "Vermelho"],
+      "search_category": "Moda e Acessorios",
+      "size": "1 ano",
+      "composition": "Jeans",
+      "substantive": "Conjunto de Roupa",
+      "classification": "Infantil",
+      "brand": "Bittix"
+    },
+    "aggregation_fields": [
+      "color Branco",
+      "color Vermelho",
+      "size 1 ano",
+      "composition Jeans",
+      "substantive Conjunto de Roupa",
+      "classification Infantil",
+      "brand Bittix"
+    ],
+    "boost_br": ["Branco", "Vermelho", "Conjunto de Roupa"],
+    "boost": ["Bittix"],
+    "popularity": 0.17492249231863655,
+    "ord": {
+      "d30": 0,
+      "d7": 0,
+      "d15": 0,
+      "d1": 0,
+      "features": {
+        "set0": {
+          "norm": 0
+        }
+      }
+    },
+    "rev": {
+      "d30": 0,
+      "d7": 0,
+      "d15": 0,
+      "d1": 0
+    },
+    "prd": {
+      "d30": 2,
+      "d7": 1,
+      "tendency": 0.5,
+      "d15": 1,
+      "d1": 0,
+      "features": {
+        "set0": {
+          "f10": -8.61005968801638e-7,
+          "f21": 0.00000795085020980451,
+          "f20": -0.00000113614854433017,
+          "f12": -4.57482204606653e-8,
+          "f11": 0.00000360952582987381,
+          "f14": 4.80664208649525e-7,
+          "f13": -7.02253381279349e-8,
+          "f0": -2.19703776055348e-8,
+          "f16": 1.80607543465617e-7,
+          "f1": 4.02433883441107e-8,
+          "f15": -0.00000664314824970144,
+          "f2": 1.43261764008548e-7,
+          "f18": -2.42364123629723e-7,
+          "f3": -5.00542186790874e-7,
+          "f17": 5.73661255338656e-8,
+          "f4": 0.00000329247049356311,
+          "f5": -0.00000116656183913472,
+          "f19": 1.26783098867587e-7,
+          "norm": 0.000011675021237268104,
+          "f6": 7.55304023843315e-8,
+          "f7": 9.07992121319841e-7,
+          "f8": -2.37120258151636e-7,
+          "f9": 4.3390912393709e-7
+        }
+      }
+    },
+    "cart": {
+      "d30": 0,
+      "d7": 0,
+      "d15": 0,
+      "d1": 0,
+      "features": {
+        "set0": {
+          "norm": 0
+        }
+      }
+    }
+  },
+  "_explanation": {
+    "value": 5.345374,
+    "description": "product of:",
+    "details": [
+      {
+        "value": 8.018061,
+        "description": "sum of:",
+        "details": [
+          {
+            "value": 5.250811,
+            "description": "weight(search.br:chinel in 54971) [PerFieldSimilarity], result of:",
+            "details": [
+              {
+                "value": 5.250811,
+                "description": "score(doc=54971,freq=1.0 = termFreq=1.0\n), product of:",
+                "details": [
+                  {
+                    "value": 5.250811,
+                    "description": "idf(docFreq=3814, maxDocs=727504)",
+                    "details": []
+                  },
+                  {
+                    "value": 1,
+                    "description": "tfNorm, computed from:",
+                    "details": [
+                      {
+                        "value": 1,
+                        "description": "termFreq=1.0",
+                        "details": []
+                      },
+                      {
+                        "value": 0,
+                        "description": "parameter k1",
+                        "details": []
+                      },
+                      {
+                        "value": 0.75,
+                        "description": "parameter b",
+                        "details": []
+                      },
+                      {
+                        "value": 13.442841,
+                        "description": "avgFieldLength",
+                        "details": []
+                      },
+                      {
+                        "value": 28.444445,
+                        "description": "fieldLength",
+                        "details": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "value": 2.767249,
+            "description": "weight(search.br:infantil in 54971) [PerFieldSimilarity], result of:",
+            "details": [
+              {
+                "value": 2.767249,
+                "description": "score(doc=54971,freq=3.0 = termFreq=3.0\n), product of:",
+                "details": [
+                  {
+                    "value": 2.767249,
+                    "description": "idf(docFreq=45712, maxDocs=727504)",
+                    "details": []
+                  },
+                  {
+                    "value": 1,
+                    "description": "tfNorm, computed from:",
+                    "details": [
+                      {
+                        "value": 3,
+                        "description": "termFreq=3.0",
+                        "details": []
+                      },
+                      {
+                        "value": 0,
+                        "description": "parameter k1",
+                        "details": []
+                      },
+                      {
+                        "value": 0.75,
+                        "description": "parameter b",
+                        "details": []
+                      },
+                      {
+                        "value": 13.442841,
+                        "description": "avgFieldLength",
+                        "details": []
+                      },
+                      {
+                        "value": 28.444445,
+                        "description": "fieldLength",
+                        "details": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "value": 0,
+            "description": "match on required clause, product of:",
+            "details": [
+              {
+                "value": 0,
+                "description": "# clause",
+                "details": []
+              },
+              {
+                "value": 0.03517698,
+                "description": "available:T, product of:",
+                "details": [
+                  {
+                    "value": 1,
+                    "description": "boost",
+                    "details": []
+                  },
+                  {
+                    "value": 0.03517698,
+                    "description": "queryNorm",
+                    "details": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "value": 0,
+            "description": "match on required clause, product of:",
+            "details": [
+              {
+                "value": 0,
+                "description": "# clause",
+                "details": []
+              },
+              {
+                "value": 0.03517698,
+                "description": "_field_names:price, product of:",
+                "details": [
+                  {
+                    "value": 1,
+                    "description": "boost",
+                    "details": []
+                  },
+                  {
+                    "value": 0.03517698,
+                    "description": "queryNorm",
+                    "details": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": 0.6666667,
+        "description": "coord(2/3)",
+        "details": []
+      }
+    ]
+  }
+}
